@@ -1,6 +1,3 @@
 streamlit
-datetime
-calendar
-psycopg2
+psycopg2-binary
 requests
-urllib.parse
