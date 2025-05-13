@@ -1,0 +1,6 @@
+streamlit
+datetime
+calendar
+psycopg2
+requests
+urllib.parse
