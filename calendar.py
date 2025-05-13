@@ -189,5 +189,4 @@ if st.session_state.selected_date:
                     )
                     send_whatsapp_message(full_phone, message)
     else:
-    else:
         st.warning("❌ No available slots for this date. Please choose another.")
