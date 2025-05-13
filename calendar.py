@@ -134,10 +134,10 @@ _, num_days = calendar.monthrange(year, month)
 
 # Show only weekdays
 dates_in_month = [
-    datetime.date(year, month, day)
-    for day in range(1, num_days + 1)
-    if datetime.date(year, month, day).weekday() < 5
+    date for day in range(1, num_days + 1)
+    if (date := datetime.date(year, month, day)).weekday() < 5 and date >= today
 ]
+
 
 cols = st.columns(5)
 for i, date in enumerate(dates_in_month):
