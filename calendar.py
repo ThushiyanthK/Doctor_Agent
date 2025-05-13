@@ -179,5 +179,15 @@ if st.session_state.selected_date:
                         f"Thank you,\nX Hospital"
                     )
                     send_whatsapp_message(full_phone, message)
+                    message = (
+                        f"عزيزي {patient_name},\n\n"
+                        f"تم تحديد موعدك مع{doctor_name} على"
+                        f"{st.session_state.selected_date.strftime('%B %d, %Y')} at {st.session_state.selected_time}.\n"
+                        f"يرجى الوصول قبل 10 دقائق.\n\n"
+                        f"شكرًا لك،\n"
+                        f"مستشفى إكس"
+                    )
+                    send_whatsapp_message(full_phone, message)
+    else:
     else:
         st.warning("❌ No available slots for this date. Please choose another.")
