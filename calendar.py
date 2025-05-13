@@ -94,7 +94,7 @@ params = st.query_params
 patient_name_1 = params.get("patient_name", [""])
 patient_name = urllib.parse.unquote(patient_name_1)
 doctor_id = params.get("doctor_id", [""])[0]
-problem = params.get("problem", [""])[0]
+problem = params.get("problem", [""])
 if not patient_name or not doctor_id:
     st.error("❌ Missing patient_name or doctor_id in URL. Use ?patient_name=NAME&doctor_id=ID")
     st.stop()
